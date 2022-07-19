@@ -7,5 +7,5 @@ def get_pokemon(request,pokemon_id):
 
 def get_pokemons(request):
     pokemons = Pokemon.objects.all()
-    pokemons_list = [f"<li><a href =/pokemons/{pokemon.id}> {pokemon.name}</li></a>" for pokemon in pokemons]
+    pokemons_list = [f"<li><a href =/pokemons/{pokemon.id} style=color:black;text-decoration:none> {pokemon.name}</li></a>" for pokemon in pokemons]
     return HttpResponse(pokemons_list)
